@@ -1,24 +1,10 @@
-# README
+# RubyOnRailsBlog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My work when learning Rails using online tutorials.
 
-Things you may want to cover:
+Will be equipped with the following functionalities:
+- Message Board
+- Chat room
+- Schedule/TO DO List
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The app will be deployed using Heroku and will be used as my personal website.
