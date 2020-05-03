@@ -39,13 +39,18 @@
             <a class="nav-link" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<%= resume_index_path  %>">resume</a>
+            <a class="nav-link" href="<%= resume_index_path  %>">Resume</a>
+          </li>
+          <li class="nav-item">
+            <!-- remember the rails g scaffold post title:string body:text -->
+            <!-- the new_post and new_user_session can be checked using rake routes-->
+            <a class="nav-link" href="<%= posts_path %>">Message Board</a>
           </li>
           <% if user_signed_in? %>
             <li class="nav-item">
               <!-- remember the rails g scaffold post title:string body:text -->
               <!-- the new_post and new_user_session can be checked using rake routes-->
-              <a class="nav-link" href="<%= new_post_path %>">Message Board</a>
+              <a class="nav-link" href="<%= new_post_path %>">Leave a Message</a>
             </li>
           <% else %>
             <li class="nav-item">

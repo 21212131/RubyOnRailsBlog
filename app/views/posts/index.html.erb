@@ -10,8 +10,11 @@
       <th colspan="3"></th>
     </tr>
   </thead> -->
-<% @posts.each do |post| %>
-    <h1><%= link_to post.title, post %></h1>
+<% @posts.reverse().each do |post| %>
+    <h3><%= link_to post.title, post %></h3>
+    <div class="toast-body">
+      <%= post.body %>
+    </div>
     <p align = "right"> Posted <%= time_ago_in_words(post.created_at) %> ago </p>
     <hr>
     <!-- <td><%= post.title %></td>
@@ -20,4 +23,13 @@
     <!-- <td><%= link_to 'Edit', edit_post_path(post) %></td> -->
     <!-- <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
 <% end %>
+
+<div>
+  <% if user_signed_in? %>
+      <h3>Leave a message?</h3>
+  <!-- You have to add this @post in posts_controller.rb inside def index -->
+      <%= render 'form', post: @post %>
+  <% end %>
+</div>
+
 <br>
