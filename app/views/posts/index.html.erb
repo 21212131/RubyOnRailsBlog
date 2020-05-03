@@ -12,6 +12,8 @@
   </thead> -->
 <% @posts.each do |post| %>
     <h1><%= link_to post.title, post %></h1>
+    <p align = "right"> Posted <%= time_ago_in_words(post.created_at) %> ago </p>
+    <hr>
     <!-- <td><%= post.title %></td>
     <td><%= post.body %></td>
     <td><%= link_to 'Show', post %></td> -->
